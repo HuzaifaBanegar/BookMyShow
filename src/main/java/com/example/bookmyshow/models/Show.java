@@ -1,18 +1,23 @@
 package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.models.enums.Feature;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.List;
 
 @Getter
 @Setter
+@Entity
 public class Show extends BaseModal{
+    @ManyToOne
     private Movie movie;
     private Date startTime;
     private Date endTime;
-    private List<Screen> screens;
+
+    @ManyToOne
+    private Screen screens;
     private Feature feature;
 }
