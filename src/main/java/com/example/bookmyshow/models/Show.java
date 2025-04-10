@@ -1,16 +1,16 @@
 package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.models.enums.Feature;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "shows")
 public class Show extends BaseModal{
     @ManyToOne
     private Movie movie;
@@ -19,5 +19,8 @@ public class Show extends BaseModal{
 
     @ManyToOne
     private Screen screens;
-    private Feature feature;
+
+    @Enumerated(EnumType.ORDINAL)
+    @ElementCollection
+    private List<Feature> feature;
 }
