@@ -14,7 +14,7 @@ public class Screen extends BaseModal{
     private String title;
 
     @OneToMany
-    @JoinColumn(name="screen_id")
+    @JoinColumn(name="screen_id") // Do not create mapping in seats
     private List<Seat> seats;
 
     @Enumerated(EnumType.ORDINAL)

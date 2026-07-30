@@ -7,6 +7,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CreateBookingResponseDTO {
-    private Booking booking;
+    private BookingResponseDTO booking;
     private ResponseStatus responseStatus;
 }

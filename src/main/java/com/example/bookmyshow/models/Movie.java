@@ -18,6 +18,6 @@ public class Movie extends BaseModal{
     private double rating;
 
     @Enumerated(EnumType.ORDINAL)
-    @ElementCollection
+    @ElementCollection //  dont want to just store 1 enum, it is list of enum hence this annotation
     private List<Feature> features;
 }

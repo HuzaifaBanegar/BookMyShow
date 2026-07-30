@@ -15,7 +15,7 @@ public class Payment extends BaseModal{
     private String referenceId;
     private Double amount;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.ORDINAL)// this will be enum marked as 0,1,2
     private PaymentMode paymentMode;
 
     @Enumerated(EnumType.ORDINAL)

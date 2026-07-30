@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-@MappedSuperclass
+@MappedSuperclass // Since we dont want to create its table it is marked as mappedsuperclass
 public class BaseModal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

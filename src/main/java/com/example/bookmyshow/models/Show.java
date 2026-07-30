@@ -23,4 +23,5 @@ public class Show extends BaseModal{
     @Enumerated(EnumType.ORDINAL)
     @ElementCollection
     private List<Feature> feature;
+
 }
