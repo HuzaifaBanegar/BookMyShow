@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -69,6 +70,16 @@ public class BookingService {
 
 
         return bookingRepository.save(booking);
+
+    }
+
+    public List<Booking> getBookingByUserId(Long userId){
+        List<Booking> bookings = bookingRepository.findAllByUserId(userId);
+        if(bookings.isEmpty()){
+            return null;
+        }
+        return bookings;
+
 
     }
 }

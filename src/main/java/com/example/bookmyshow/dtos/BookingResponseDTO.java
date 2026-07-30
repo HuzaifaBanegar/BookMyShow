@@ -13,5 +13,6 @@ public class BookingResponseDTO {
     private Long userId;
     private BookingStatus bookingStatus;
     private double amount;
-    private List<Long> showSeatIds;
+    private Long showId;
+    private List<Long> seatIds;
 }
